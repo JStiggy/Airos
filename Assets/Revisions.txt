@@ -1,0 +1,79 @@
+Version 1
+
+-Implemented Main Menu, Tutorial Screen, Game Over Screen, High Score List
+
+Main Menu
+- Ability to Start Game, either tutorial or main gameplay loop (Main gameplay currently does not exist)
+- Ability to quit Game (Does not work in Editor, instead erases save data for testing purposes, must restart 
+  the game in the editor from the main menu scene for save data to reinitialize after deletion), quitting 
+  the game requires a secondary prompt, all other options are disabled temporarily
+- Ability to view high scores
+	
+Tutorial Screen
+- Currently displays dummy text
+- Ability to start the game (Main gameplay currently does not exist)
+- Ability to permanently disable the tutorial via a toggle on the bottom corner
+
+Game Over Screen
+- Prompt the player to assign a name when a high score is obtained, this score is added to the high score list 
+  for viewing, all other menu options are hidden temporarily
+- If no high score is obtained, only the normal menu options are given
+- Ability to restart the game, moving either to the tutorial or the main game as applicable
+- Ability to move to the high score list
+- Ability to return to the main menu
+
+High Score Screen
+- Ability to view the list of high scores
+- Ability to return to the main menu
+
+Main Game Play Screen
+- Simply gives the player a score for testing the high score list
+- No game play implemented in current version   
+
+Version 2
+
+- Implemented changes to GameOver Script, highscores must enter a name to submit a score
+- Creation and implementation of the PlayerController Script
+
+Main Gameplay Screen
+- Camera now scrolls at progressively increasing speeds
+- Ability to pause the game
+- Ability to shift the scrolling direction
+- Objects can change colors, not altered by scroll currently
+- Move to the game over screen when the player moves a certain distance from the camera
+- Platforms despawn after 20 secs
+- Platforms only have collision detection when being used.
+- Score earned based on speed
+
+Player Character
+- Full movement control
+- Ability to vary jump height based on length of button press
+- Ability to drop through platforms
+- Ability to chabge color based on direction, not altered by scroll currently
+- No animations currently implemented for character
+
+Version 3
+
+Main Gameplay Screen
+- BugFix: The camera cannot scroll change during pauses
+- Camera now scrolls in all directions
+- Platforms have spawning restritions in all direction
+- Platforms spawn in all directions
+- Platform delete based on distance instead of time
+- Colors now change dynamically based on direction.
+- A score and scroll bar display have been added to the main game
+- Game speed has been slightly slowed down
+- Music has been implemented for the main gameplay loop
+
+Player Character
+- Animations for the player have been implemented
+- Detection has been altered for jumping and collision
+
+Version 4
+
+Main Gameplay Screen
+- Creation of the Moving platform,  move a set distance perpendicular to the scroll direction
+- Creation of the collapsing platform, shake for 2 seconds before falling
+- Creation of the Bonus Score Platform, add a bonus to the player score 
+- All platform types now spawn (no balance performed yet)
+- Player Jump speed now scales during upward scrolling (Still not enough!)
